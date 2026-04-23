@@ -1,0 +1,1214 @@
+CO STARTING
+   TITLEONE  Providence Airport Area NO2 Screening - 2019 to 2023
+   MODELOPT  DFAULT CONC
+   AVERTIME  1 ANNUAL
+   POLLUTID  NO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS_PROV_COMBINED.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+ 
+   LOCATION  TERMHTR POINT 297700.0 4621850.0 0.0
+   LOCATION  MAINT   POINT 297950.0 4621700.0 0.0
+   LOCATION  CARGOH  POINT 297500.0 4621600.0 0.0
+ 
+   SRCPARAM  TERMHTR 0.350 18.0 410.0 14.0 0.80
+   SRCPARAM  MAINT   0.220 15.0 400.0 12.0 0.70
+   SRCPARAM  CARGOH  0.280 16.0 420.0 13.0 0.75
+ 
+   SRCGROUP  ALL
+SO FINISHED
+ 
+RE STARTING
+   GRIDCART  GRID1 STA
+   GRIDCART  GRID1 XYINC 296500.0 31 100.0 4620500.0 31 100.0
+   GRIDCART  GRID1 END
+ 
+   DISCCART  300408.0 4622409.0 0.0 0.0 0.0
+   DISCCART  298568.0 4622728.0 0.0 0.0 0.0
+   DISCCART  297250.0 4621100.0 0.0 0.0 0.0
+   DISCCART  296950.0 4621650.0 0.0 0.0 0.0
+   DISCCART  298425.0 4621828.0 0.0 0.0 0.0
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  PVDOKX2019_2023.SFC FREE
+   PROFFILE  PVDOKX2019_2023.PFL FREE
+   SURFDATA  14765 2019 PVD
+   SITEDATA  14765 2019 PVD
+   UAIRDATA  99999 2019 OKX
+   PROFBASE  0.0
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE  ALLAVE FIRST
+   MAXTABLE  ALLAVE 50
+   SUMMFILE  run_prov_combined.sum
+OU FINISHED
+
+
+  *** Message Summary For AERMOD Model Setup ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of           11 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361       8       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ RE W214      27       RECART: ELEV Input Inconsistent With Option: Defaults Used        GRID1
+ RE W229      29       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      30       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      31       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      32       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      33       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ ME W186      43       MEOPEN: THRESH_1MIN 1-min ASOS wind speed threshold used           0.50
+ ME W187      43       MEOPEN: ADJ_U* Option for Stable Low Winds used in AERMET              
+ ME W530      43       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     UAIRDATA
+ ME W531      43       MEOPEN: CAUTION! Met Station ID Missing from SURFFILE for      SITEDATA
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   1
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ ** Model Options Selected:
+      * Model Uses Regulatory DEFAULT Options
+      * Model Is Setup For Calculation of Average CONCentration Values.
+      * NO GAS DEPOSITION Data Provided.
+      * NO PARTICLE DEPOSITION Data Provided.
+      * Model Uses NO DRY DEPLETION. DDPLETE  =  F
+      * Model Uses NO WET DEPLETION. WETDPLT  =  F
+      * Stack-tip Downwash.
+      * Model Accounts for ELEVated Terrain Effects.
+      * Use Calms Processing Routine.
+      * Use Missing Data Processing Routine.
+      * No Exponential Decay.
+      * Full Conversion Assumed for NO2.
+      * Model Uses RURAL Dispersion Only.
+      * ADJ_U*   - Use ADJ_U* option for SBL in AERMET
+      * CCVR_Sub - Meteorological data includes CCVR substitutions
+      * TEMP_Sub - Meteorological data includes TEMP substitutions
+      * Model Assumes No FLAGPOLE Receptor Heights. 
+      * The User Specified a Pollutant Type of: NO2     
+
+ **Note that special processing requirements apply for the 1-hour NO2 NAAQS - check available guidance.
+   Model will process user-specified ranks of daily maximum 1-hour values averaged across the number of years modeled.
+   For annual NO2 NAAQS modeling, the multi-year maximum of PERIOD values can be simulated using the MULTYEAR keyword.
+   Multi-year PERIOD and 1-hour values should only be done in a single model run using the MULTYEAR option with a
+   single multi-year meteorological data file using STARTEND keyword.
+  
+ **Model Calculates  1 Short Term Average(s) of:   1-HR
+     and Calculates ANNUAL Averages
+  
+ **This Run Includes:      3 Source(s);       1 Source Group(s); and     966 Receptor(s)
+
+                with:      3 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 RLINE/RLINEXT source(s)
+                 and:      0 OPENPIT source(s)
+                 and:      0 BUOYANT LINE source(s) with a total of     0 line(s)
+                 and:      0 SWPOINT source(s)
+
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  23132
+  
+ **Output Options Selected:
+          Model Outputs Tables of ANNUAL Averages by Receptor
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.6 MB of RAM.
+  
+ **Input Runstream File:          Prov.inp                                                                                        
+ **Output Print File:             Prov.out                                                                                        
+
+ **Detailed Error/Message File:   ERRORS_PROV_COMBINED.OUT                                                                        
+ **File for Summary of Results:   run_prov_combined.sum                                                                           
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   2
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ TERMHTR          0   0.35000E+00  297700.0 4621850.0     0.0    18.00   410.00    14.00     0.80    NO      NO    NO         
+ MAINT            0   0.22000E+00  297950.0 4621700.0     0.0    15.00   400.00    12.00     0.70    NO      NO    NO         
+ CARGOH           0   0.28000E+00  297500.0 4621600.0     0.0    16.00   420.00    13.00     0.75    NO      NO    NO         
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   3
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        TERMHTR     , MAINT       , CARGOH      ,
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   4
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                          *** X-COORDINATES OF GRID ***
+                                                    (METERS)
+
+       296500.0,  296600.0,  296700.0,  296800.0,  296900.0,  297000.0,  297100.0,  297200.0,  297300.0,  297400.0,
+       297500.0,  297600.0,  297700.0,  297800.0,  297900.0,  298000.0,  298100.0,  298200.0,  298300.0,  298400.0,
+       298500.0,  298600.0,  298700.0,  298800.0,  298900.0,  299000.0,  299100.0,  299200.0,  299300.0,  299400.0,
+       299500.0,
+
+                                          *** Y-COORDINATES OF GRID *** 
+                                                    (METERS)
+
+      4620500.0, 4620600.0, 4620700.0, 4620800.0, 4620900.0, 4621000.0, 4621100.0, 4621200.0, 4621300.0, 4621400.0,
+      4621500.0, 4621600.0, 4621700.0, 4621800.0, 4621900.0, 4622000.0, 4622100.0, 4622200.0, 4622300.0, 4622400.0,
+      4622500.0, 4622600.0, 4622700.0, 4622800.0, 4622900.0, 4623000.0, 4623100.0, 4623200.0, 4623300.0, 4623400.0,
+      4623500.0,
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   5
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     296500.00    296600.00    296700.00    296800.00    296900.00    297000.00    297100.00    297200.00    297300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   6
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     297400.00    297500.00    297600.00    297700.00    297800.00    297900.00    298000.00    298100.00    298200.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   7
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     298300.00    298400.00    298500.00    298600.00    298700.00    298800.00    298900.00    299000.00    299100.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   8
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     299200.00    299300.00    299400.00    299500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE   9
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     296500.00    296600.00    296700.00    296800.00    296900.00    297000.00    297100.00    297200.00    297300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  10
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     297400.00    297500.00    297600.00    297700.00    297800.00    297900.00    298000.00    298100.00    298200.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  11
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     298300.00    298400.00    298500.00    298600.00    298700.00    298800.00    298900.00    299000.00    299100.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  12
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     299200.00    299300.00    299400.00    299500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |          0.00         0.00         0.00         0.00
+  4623400.00 |          0.00         0.00         0.00         0.00
+  4623300.00 |          0.00         0.00         0.00         0.00
+  4623200.00 |          0.00         0.00         0.00         0.00
+  4623100.00 |          0.00         0.00         0.00         0.00
+  4623000.00 |          0.00         0.00         0.00         0.00
+  4622900.00 |          0.00         0.00         0.00         0.00
+  4622800.00 |          0.00         0.00         0.00         0.00
+  4622700.00 |          0.00         0.00         0.00         0.00
+  4622600.00 |          0.00         0.00         0.00         0.00
+  4622500.00 |          0.00         0.00         0.00         0.00
+  4622400.00 |          0.00         0.00         0.00         0.00
+  4622300.00 |          0.00         0.00         0.00         0.00
+  4622200.00 |          0.00         0.00         0.00         0.00
+  4622100.00 |          0.00         0.00         0.00         0.00
+  4622000.00 |          0.00         0.00         0.00         0.00
+  4621900.00 |          0.00         0.00         0.00         0.00
+  4621800.00 |          0.00         0.00         0.00         0.00
+  4621700.00 |          0.00         0.00         0.00         0.00
+  4621600.00 |          0.00         0.00         0.00         0.00
+  4621500.00 |          0.00         0.00         0.00         0.00
+  4621400.00 |          0.00         0.00         0.00         0.00
+  4621300.00 |          0.00         0.00         0.00         0.00
+  4621200.00 |          0.00         0.00         0.00         0.00
+  4621100.00 |          0.00         0.00         0.00         0.00
+  4621000.00 |          0.00         0.00         0.00         0.00
+  4620900.00 |          0.00         0.00         0.00         0.00
+  4620800.00 |          0.00         0.00         0.00         0.00
+  4620700.00 |          0.00         0.00         0.00         0.00
+  4620600.00 |          0.00         0.00         0.00         0.00
+  4620500.00 |          0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  13
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                             *** DISCRETE CARTESIAN RECEPTORS ***
+                                           (X-COORD, Y-COORD, ZELEV, ZHILL, ZFLAG)
+                                                           (METERS)
+
+     ( 300408.0, 4622409.0,       0.0,       0.0,       0.0);         ( 298568.0, 4622728.0,       0.0,       0.0,       0.0);      
+     ( 297250.0, 4621100.0,       0.0,       0.0,       0.0);         ( 296950.0, 4621650.0,       0.0,       0.0,       0.0);      
+     ( 298425.0, 4621828.0,       0.0,       0.0,       0.0);                                                                       
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  14
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                      * SOURCE-RECEPTOR COMBINATIONS FOR WHICH CALCULATIONS MAY NOT BE PERFORMED *
+                        LESS THAN 1.0 METER; WITHIN OPENPIT; OR BEYOND 80KM FOR FASTAREA/FASTALL
+
+
+                              SOURCE          - - RECEPTOR LOCATION - -         DISTANCE
+                                ID            XR (METERS)   YR (METERS)         (METERS)
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+                             CARGOH              297500.0     4621600.0             0.00
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  15
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  16
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   PVDOKX2019_2023.SFC                                                                Met Version:  23132
+   Profile file:   PVDOKX2019_2023.PFL                                                             
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:    14765                  Upper air station no.:    99999
+                  Name: PVD                                        Name: OKX                                     
+                  Year:   2019                                     Year:   2019
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 19 01 01   1 01  -51.4  0.509 -9.000 -9.000 -999.  871.    284.8  0.04   0.75   1.00    7.31  162.   10.0  279.8    2.0
+ 19 01 01   1 02  -44.4  0.442 -9.000 -9.000 -999.  708.    214.4  0.04   0.75   1.00    6.38  157.   10.0  279.8    2.0
+ 19 01 01   1 03  -37.0  0.370 -9.000 -9.000 -999.  545.    150.8  0.04   0.75   1.00    5.39  158.   10.0  280.9    2.0
+ 19 01 01   1 04  -31.7  0.320 -9.000 -9.000 -999.  436.    112.7  0.03   0.75   1.00    4.92  183.   10.0  282.5    2.0
+ 19 01 01   1 05  -41.8  0.428 -9.000 -9.000 -999.  671.    201.1  0.03   0.75   1.00    6.31  223.   10.0  285.3    2.0
+ 19 01 01   1 06  -56.9  0.583 -9.000 -9.000 -999. 1068.    374.3  0.05   0.75   1.00    7.91  241.   10.0  285.9    2.0
+ 19 01 01   1 07  -64.0  0.708 -9.000 -9.000 -999. 1427.    551.7  0.05   0.75   1.00    9.54  249.   10.0  285.9    2.0
+ 19 01 01   1 08  -58.6  0.629 -9.000 -9.000 -999. 1207.    435.2  0.05   0.75   0.67    8.50  248.   10.0  285.9    2.0
+ 19 01 01   1 09    8.7  0.660  0.283  0.005   93. 1286.  -2959.9  0.05   0.75   0.38    8.76  250.   10.0  287.0    2.0
+ 19 01 01   1 10   36.0  0.688  0.598  0.005  212. 1368.   -805.2  0.05   0.75   0.27    9.07  254.   10.0  287.5    2.0
+ 19 01 01   1 11   55.4  0.686  0.790  0.005  317. 1363.   -518.5  0.05   0.75   0.23    8.93  271.   10.0  287.5    2.0
+ 19 01 01   1 12   75.7  0.688  0.962  0.005  419. 1371.   -384.4  0.05   0.75   0.22    8.93  287.   10.0  287.0    2.0
+ 19 01 01   1 13   74.5  1.249  1.012  0.005  498. 3346.  -2338.1  0.38   0.75   0.22   10.17  308.   10.0  284.8    2.0
+ 19 01 01   1 14   58.0  1.060  0.963  0.006  551. 2693.  -1837.8  0.38   0.75   0.24    8.62  306.   10.0  284.2    2.0
+ 19 01 01   1 15   28.9  1.032  0.774  0.008  575. 2528.  -3416.8  0.38   0.75   0.30    8.42  317.   10.0  283.1    2.0
+ 19 01 01   1 16  -25.2  1.040 -9.000 -9.000 -999. 2545.   4010.8  0.38   0.75   0.45    7.99  314.   10.0  281.4    2.0
+ 19 01 01   1 17  -64.0  0.907 -9.000 -9.000 -999. 2109.   1049.9  0.38   0.75   1.00    7.03  304.   10.0  279.8    2.0
+ 19 01 01   1 18  -46.6  0.459 -9.000 -9.000 -999. 1031.    231.8  0.05   0.75   1.00    6.24  295.   10.0  278.8    2.0
+ 19 01 01   1 19  -64.0  0.734 -9.000 -9.000 -999. 1507.    593.0  0.38   0.75   1.00    5.75  302.   10.0  278.1    2.0
+ 19 01 01   1 20  -32.4  0.317 -9.000 -9.000 -999.  665.    110.2  0.05   0.75   1.00    4.37  295.   10.0  277.0    2.0
+ 19 01 01   1 21  -23.3  0.226 -9.000 -9.000 -999.  294.     56.4  0.05   0.75   1.00    3.17  293.   10.0  276.4    2.0
+ 19 01 01   1 22  -28.2  0.274 -9.000 -9.000 -999.  343.     82.4  0.05   0.75   1.00    3.80  299.   10.0  275.9    2.0
+ 19 01 01   1 23  -24.8  0.239 -9.000 -9.000 -999.  281.     62.9  0.05   0.75   1.00    3.34  298.   10.0  274.8    2.0
+ 19 01 01   1 24  -32.5  0.313 -9.000 -9.000 -999.  421.    108.0  0.38   0.75   1.00    2.54  313.   10.0  274.2    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 19 01 01 01   10.0 1  162.    7.31   279.9   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  17
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     296500.00    296600.00    296700.00    296800.00    296900.00    297000.00    297100.00    297200.00    297300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       0.05350      0.06012      0.06777      0.07625      0.08516      0.09397      0.10219      0.10946      0.11567
+  4623400.00 |       0.05251      0.05918      0.06706      0.07603      0.08576      0.09561      0.10494      0.11324      0.12029
+  4623300.00 |       0.05143      0.05815      0.06618      0.07555      0.08605      0.09704      0.10769      0.11725      0.12534
+  4623200.00 |       0.05025      0.05699      0.06515      0.07485      0.08602      0.09816      0.11031      0.12143      0.13086
+  4623100.00 |       0.04896      0.05568      0.06396      0.07394      0.08569      0.09892      0.11271      0.12573      0.13688
+  4623000.00 |       0.04764      0.05419      0.06253      0.07281      0.08509      0.09929      0.11476      0.13002      0.14339
+  4622900.00 |       0.04639      0.05260      0.06084      0.07135      0.08420      0.09932      0.11640      0.13415      0.15037
+  4622800.00 |       0.04525      0.05104      0.05892      0.06948      0.08290      0.09902      0.11762      0.13794      0.15765
+  4622700.00 |       0.04412      0.04956      0.05695      0.06723      0.08100      0.09820      0.11840      0.14125      0.16504
+  4622600.00 |       0.04290      0.04807      0.05503      0.06476      0.07843      0.09659      0.11867      0.14404      0.17215
+  4622500.00 |       0.04171      0.04651      0.05305      0.06221      0.07542      0.09404      0.11803      0.14617      0.17841
+  4622400.00 |       0.04077      0.04511      0.05108      0.05961      0.07215      0.09069      0.11629      0.14737      0.18316
+  4622300.00 |       0.03998      0.04403      0.04943      0.05716      0.06878      0.08671      0.11348      0.14790      0.18633
+  4622200.00 |       0.03905      0.04301      0.04812      0.05514      0.06567      0.08249      0.10963      0.14853      0.19026
+  4622100.00 |       0.03827      0.04207      0.04696      0.05353      0.06307      0.07841      0.10491      0.14871      0.20073
+  4622000.00 |       0.03815      0.04187      0.04654      0.05269      0.06134      0.07477      0.09884      0.14542      0.21884
+  4621900.00 |       0.03858      0.04247      0.04726      0.05332      0.06138      0.07300      0.09233      0.13251      0.22359
+  4621800.00 |       0.03972      0.04382      0.04894      0.05549      0.06404      0.07552      0.09194      0.11979      0.18858
+  4621700.00 |       0.04200      0.04651      0.05218      0.05954      0.06939      0.08296      0.10213      0.12901      0.16424
+  4621600.00 |       0.04499      0.05007      0.05648      0.06482      0.07604      0.09160      0.11376      0.14514      0.18089
+  4621500.00 |       0.04878      0.05469      0.06225      0.07217      0.08557      0.10419      0.13099      0.17037      0.22239
+  4621400.00 |       0.05380      0.06088      0.06992      0.08174      0.09759      0.11944      0.15028      0.19468      0.26406
+  4621300.00 |       0.05981      0.06812      0.07871      0.09246      0.11052      0.13450      0.16692      0.21449      0.28708
+  4621200.00 |       0.06666      0.07620      0.08815      0.10322      0.12232      0.14669      0.17918      0.22611      0.27967
+  4621100.00 |       0.07379      0.08418      0.09689      0.11247      0.13147      0.15499      0.18628      0.22621      0.26113
+  4621000.00 |       0.08041      0.09127      0.10421      0.11945      0.13738      0.15958      0.18800      0.21799      0.24109
+  4620900.00 |       0.08618      0.09710      0.10959      0.12377      0.14041      0.16100      0.18462      0.20588      0.22250
+  4620800.00 |       0.09084      0.10127      0.11281      0.12582      0.14129      0.15945      0.17772      0.19285      0.20594
+  4620700.00 |       0.09407      0.10366      0.11419      0.12628      0.14036      0.15537      0.16912      0.18036      0.19115
+  4620600.00 |       0.09587      0.10459      0.11434      0.12553      0.13774      0.14969      0.16013      0.16879      0.17774
+  4620500.00 |       0.09650      0.10457      0.11366      0.12367      0.13383      0.14328      0.15134      0.15809      0.16558
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  18
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     297400.00    297500.00    297600.00    297700.00    297800.00    297900.00    298000.00    298100.00    298200.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       0.12087      0.12517      0.12882      0.13222      0.13566      0.13939      0.14369      0.14905      0.15571
+  4623400.00 |       0.12609      0.13073      0.13452      0.13796      0.14151      0.14557      0.15059      0.15705      0.16492
+  4623300.00 |       0.13188      0.13695      0.14088      0.14436      0.14802      0.15251      0.15848      0.16633      0.17547
+  4623200.00 |       0.13837      0.14398      0.14808      0.15155      0.15534      0.16042      0.16765      0.17717      0.18746
+  4623100.00 |       0.14565      0.15197      0.15627      0.15972      0.16368      0.16957      0.17844      0.18985      0.20088
+  4623000.00 |       0.15387      0.16117      0.16573      0.16911      0.17330      0.18030      0.19129      0.20464      0.21545
+  4622900.00 |       0.16320      0.17189      0.17680      0.18010      0.18466      0.19319      0.20674      0.22161      0.23048
+  4622800.00 |       0.17376      0.18452      0.19001      0.19321      0.19837      0.20899      0.22536      0.24043      0.24483
+  4622700.00 |       0.18571      0.19959      0.20606      0.20922      0.21540      0.22875      0.24765      0.26013      0.25717
+  4622600.00 |       0.19899      0.21779      0.22596      0.22924      0.23722      0.25395      0.27360      0.27874      0.26685
+  4622500.00 |       0.21301      0.23988      0.25109      0.25481      0.26594      0.28620      0.30185      0.29375      0.27519
+  4622400.00 |       0.22604      0.26637      0.28363      0.28817      0.30456      0.32658      0.32855      0.30432      0.28604
+  4622300.00 |       0.23473      0.29538      0.32681      0.33182      0.35686      0.37433      0.34882      0.31476      0.30257
+  4622200.00 |       0.23593      0.31601      0.38381      0.38582      0.42527      0.42319      0.36281      0.33184      0.32308
+  4622100.00 |       0.23633      0.30253      0.43844      0.42983      0.49606      0.46008      0.37742      0.36102      0.34137
+  4622000.00 |       0.26112      0.26328      0.37508      0.37885      0.48673      0.48395      0.40668      0.40701      0.35320
+  4621900.00 |       0.31971      0.28021      0.26328      0.26236      0.37088      0.53347      0.45583      0.44363      0.36695
+  4621800.00 |       0.35277      0.30307      0.29874      0.24716      0.40438      0.54570      0.43507      0.44741      0.40184
+  4621700.00 |       0.21924      0.22183      0.30664      0.34792      0.58792      0.58267      0.48307      0.56682      0.51580
+  4621600.00 |       0.17954      0.19568      0.31766      0.48944      0.55573      0.56787      0.67232      0.87398      0.69960
+  4621500.00 |       0.25561      0.26588      0.70736      0.73114      0.66708      0.63888      0.62465      0.68221      0.61054
+  4621400.00 |       0.35236      0.39226      0.53991      0.64845      0.63483      0.61949      0.57931      0.55639      0.50491
+  4621300.00 |       0.34468      0.38965      0.43433      0.51058      0.51341      0.51158      0.50018      0.47886      0.44133
+  4621200.00 |       0.31669      0.35404      0.37798      0.42098      0.42152      0.42486      0.41631      0.40259      0.38156
+  4621100.00 |       0.28943      0.31950      0.33825      0.36086      0.36096      0.36174      0.35656      0.34541      0.32815
+  4621000.00 |       0.26464      0.28905      0.30441      0.31752      0.31939      0.31767      0.31184      0.30483      0.29091
+  4620900.00 |       0.24248      0.26197      0.27466      0.28412      0.28760      0.28685      0.27913      0.27294      0.26362
+  4620800.00 |       0.22263      0.23814      0.24888      0.25698      0.26179      0.26287      0.25569      0.24826      0.24115
+  4620700.00 |       0.20488      0.21744      0.22669      0.23418      0.24005      0.24262      0.23767      0.22989      0.22273
+  4620600.00 |       0.18909      0.19952      0.20760      0.21469      0.22121      0.22484      0.22232      0.21575      0.20827
+  4620500.00 |       0.17514      0.18401      0.19111      0.19781      0.20459      0.20895      0.20841      0.20383      0.19686
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  19
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     298300.00    298400.00    298500.00    298600.00    298700.00    298800.00    298900.00    299000.00    299100.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       0.16296      0.16911      0.17237      0.17191      0.16788      0.16101      0.15226      0.14270      0.13334
+  4623400.00 |       0.17284      0.17854      0.18028      0.17776      0.17165      0.16296      0.15281      0.14244      0.13282
+  4623300.00 |       0.18367      0.18821      0.18779      0.18287      0.17460      0.16415      0.15283      0.14195      0.13232
+  4623200.00 |       0.19527      0.19774      0.19457      0.18710      0.17670      0.16467      0.15250      0.14142      0.13194
+  4623100.00 |       0.20720      0.20663      0.20039      0.19042      0.17802      0.16469      0.15202      0.14097      0.13173
+  4623000.00 |       0.21881      0.21443      0.20518      0.19291      0.17875      0.16445      0.15155      0.14067      0.13183
+  4622900.00 |       0.22931      0.22097      0.20915      0.19479      0.17908      0.16406      0.15115      0.14071      0.13249
+  4622800.00 |       0.23809      0.22657      0.21268      0.19620      0.17902      0.16361      0.15110      0.14141      0.13389
+  4622700.00 |       0.24534      0.23204      0.21604      0.19704      0.17860      0.16341      0.15183      0.14301      0.13597
+  4622600.00 |       0.25253      0.23819      0.21873      0.19700      0.17824      0.16410      0.15361      0.14539      0.13868
+  4622500.00 |       0.26176      0.24439      0.21983      0.19647      0.17881      0.16605      0.15636      0.14860      0.14225
+  4622400.00 |       0.27326      0.24837      0.21938      0.19675      0.18092      0.16931      0.16029      0.15308      0.14719
+  4622300.00 |       0.28340      0.24897      0.21929      0.19911      0.18496      0.17443      0.16625      0.15978      0.15469
+  4622200.00 |       0.28837      0.24899      0.22234      0.20465      0.19218      0.18291      0.17586      0.17051      0.16648
+  4622100.00 |       0.29080      0.25399      0.23095      0.21563      0.20484      0.19700      0.19125      0.18694      0.18360
+  4622000.00 |       0.29991      0.26777      0.24760      0.23407      0.22469      0.21795      0.21284      0.20860      0.20477
+  4621900.00 |       0.31911      0.29016      0.27151      0.25930      0.25061      0.24349      0.23704      0.23078      0.22459
+  4621800.00 |       0.35595      0.32536      0.30486      0.28953      0.27658      0.26489      0.25410      0.24403      0.23464
+  4621700.00 |       0.43333      0.37679      0.33804      0.30985      0.28801      0.27029      0.25541      0.24260      0.23140
+  4621600.00 |       0.54151      0.43682      0.36908      0.32366      0.29159      0.26777      0.24929      0.23441      0.22208
+  4621500.00 |       0.53993      0.46995      0.40255      0.34757      0.30573      0.27425      0.25030      0.23171      0.21691
+  4621400.00 |       0.44837      0.40966      0.37971      0.34718      0.31377      0.28325      0.25726      0.23589      0.21844
+  4621300.00 |       0.39324      0.35429      0.32753      0.31020      0.29422      0.27615      0.25689      0.23818      0.22115
+  4621200.00 |       0.34627      0.31544      0.29035      0.27167      0.25965      0.25055      0.24094      0.22975      0.21753
+  4621100.00 |       0.30168      0.27628      0.25796      0.24251      0.22996      0.22141      0.21558      0.21026      0.20409
+  4621000.00 |       0.26758      0.24275      0.22556      0.21453      0.20516      0.19710      0.19122      0.18731      0.18429
+  4620900.00 |       0.24448      0.22024      0.20006      0.18827      0.18131      0.17559      0.17053      0.16668      0.16416
+  4620800.00 |       0.22698      0.20581      0.18407      0.16862      0.16031      0.15562      0.15199      0.14885      0.14645
+  4620700.00 |       0.21192      0.19487      0.17449      0.15653      0.14492      0.13884      0.13548      0.13305      0.13106
+  4620600.00 |       0.19887      0.18520      0.16762      0.14953      0.13529      0.12659      0.12202      0.11945      0.11769
+  4620500.00 |       0.18801      0.17640      0.16160      0.14497      0.12972      0.11866      0.11210      0.10855      0.10649
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  20
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     299200.00    299300.00    299400.00    299500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       0.12486      0.11754      0.11131      0.10599
+  4623400.00 |       0.12444      0.11733      0.11131      0.10620
+  4623300.00 |       0.12414      0.11727      0.11150      0.10666
+  4623200.00 |       0.12401      0.11744      0.11200      0.10747
+  4623100.00 |       0.12415      0.11799      0.11292      0.10867
+  4623000.00 |       0.12475      0.11904      0.11429      0.11023
+  4622900.00 |       0.12598      0.12062      0.11607      0.11214
+  4622800.00 |       0.12779      0.12266      0.11826      0.11445
+  4622700.00 |       0.13013      0.12519      0.12095      0.11728
+  4622600.00 |       0.13309      0.12837      0.12434      0.12091
+  4622500.00 |       0.13697      0.13256      0.12892      0.12592
+  4622400.00 |       0.14242      0.13860      0.13559      0.13321
+  4622300.00 |       0.15076      0.14775      0.14544      0.14363
+  4622200.00 |       0.16342      0.16106      0.15916      0.15753
+  4622100.00 |       0.18086      0.17846      0.17619      0.17395
+  4622000.00 |       0.20108      0.19739      0.19364      0.18983
+  4621900.00 |       0.21844      0.21237      0.20642      0.20062
+  4621800.00 |       0.22585      0.21765      0.21000      0.20284
+  4621700.00 |       0.22142      0.21246      0.20436      0.19698
+  4621600.00 |       0.21157      0.20248      0.19448      0.18734
+  4621500.00 |       0.20484      0.19481      0.18631      0.17896
+  4621400.00 |       0.20419      0.19245      0.18270      0.17444
+  4621300.00 |       0.20626      0.19349      0.18264      0.17338
+  4621200.00 |       0.20523      0.19357      0.18294      0.17346
+  4621100.00 |       0.19676      0.18861      0.18017      0.17189
+  4621000.00 |       0.18106      0.17701      0.17204      0.16639
+  4620900.00 |       0.16247      0.16092      0.15892      0.15620
+  4620800.00 |       0.14491      0.14406      0.14348      0.14273
+  4620700.00 |       0.12959      0.12874      0.12843      0.12843
+  4620600.00 |       0.11636      0.11546      0.11505      0.11509
+  4620500.00 |       0.10510      0.10413      0.10356      0.10341
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  21
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                   *** THE ANNUAL AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+       X-COORD (M)   Y-COORD (M)        CONC                       X-COORD (M)   Y-COORD (M)        CONC
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+         300408.00    4622409.00        0.12269                      298568.00    4622728.00        0.20289                         
+         297250.00    4621100.00        0.24535                      296950.00    4621650.00        0.07924                         
+         298425.00    4621828.00        0.30762                                                                                     
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  22
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     296500.00    296600.00    296700.00    296800.00    296900.00    297000.00    297100.00    297200.00    297300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       5.47144      5.29942      5.06728      4.89206      4.80104      4.89479      4.86596      4.63599      4.49675
+  4623400.00 |       5.62215      5.54946      5.35929      5.04754      4.91912      4.98463      4.97758      4.81889      4.60272
+  4623300.00 |       5.73084      5.74497      5.63322      5.40816      5.02257      5.01966      5.09456      4.99496      4.73408
+  4623200.00 |       5.76903      5.86713      5.85585      5.69659      5.39737      5.09581      5.19552      5.14392      4.93472
+  4623100.00 |       5.58968      5.92843      5.97947      5.95733      5.72052      5.34103      5.17619      5.24579      5.15386
+  4623000.00 |       5.31638      5.75778      6.06623      6.08898      6.01688      5.73327      5.34418      5.33128      5.35188
+  4622900.00 |       5.04644      5.49088      5.90893      6.16321      6.14434      6.01751      5.63112      5.38672      5.45411
+  4622800.00 |       4.80698      5.23251      5.64763      6.03734      6.18525      6.10917      5.98023      5.57025      5.60723
+  4622700.00 |       4.73772      4.88697      5.36040      5.71360      6.09897      6.05909      5.92483      5.82471      5.73360
+  4622600.00 |       4.87314      4.75711      4.91251      5.38927      5.67508      6.00272      5.82000      5.84721      5.80091
+  4622500.00 |       4.85128      4.83846      4.88184      4.93496      5.23150      5.46170      5.77660      5.81724      5.97489
+  4622400.00 |       5.00650      4.82906      4.91767      5.04725      5.06246      5.22895      5.42674      5.97063      6.02414
+  4622300.00 |       5.64274      5.36980      5.08611      4.97501      5.20926      5.36305      5.78990      5.77347      6.25086
+  4622200.00 |       5.99487      5.83915      5.55337      5.31080      5.33689      5.47390      5.86949      6.46537      6.33019
+  4622100.00 |       5.99144      5.89227      5.75636      5.75789      5.69246      5.55783      5.82519      6.48162      7.02551
+  4622000.00 |       5.46263      5.56385      5.59897      5.60510      5.57926      5.42527      5.53604      5.79828      6.40926
+  4621900.00 |       5.14381      5.23799      5.38528      5.57480      5.71546      5.71756      5.72068      5.94699      6.58345
+  4621800.00 |       5.38942      5.19334      5.18436      5.20091      5.30658      5.36958      5.44111      5.71590      6.38821
+  4621700.00 |       5.70709      5.57358      5.31931      5.01648      5.04455      5.20024      5.19619      5.61882      6.30654
+  4621600.00 |       5.59216      5.58941      5.54728      5.49741      5.68411      6.13662      6.49400      6.56883      7.60906
+  4621500.00 |       6.29532      6.44445      6.69152      7.04867      7.32967      7.56408      7.74542      7.87099      8.05196
+  4621400.00 |       6.51178      6.73340      6.83232      7.11899      7.88337      8.39595      7.92532      8.31918     10.00202
+  4621300.00 |       6.52732      6.84322      7.46807      8.00109      7.93059      8.23484      8.35772      8.81871      9.65228
+  4621200.00 |       6.85163      7.25618      7.49456      8.02131      8.46448      8.21603      7.69879      8.39293      8.32442
+  4621100.00 |       6.98025      7.33149      7.86247      8.17387      7.75380      7.18101      7.43232      7.48522      7.31686
+  4621000.00 |       7.19156      7.55440      7.72847      7.38892      7.01695      6.95433      7.16296      6.84578      6.45116
+  4620900.00 |       7.17198      7.37067      7.24800      6.89286      6.65113      6.68031      6.38632      6.32017      5.83058
+  4620800.00 |       7.30051      7.25081      6.98517      6.39429      6.16158      6.12998      6.11366      5.69568      5.46361
+  4620700.00 |       7.15360      7.00856      6.44910      5.76874      5.96181      5.82122      5.83298      5.36008      5.17872
+  4620600.00 |       6.92658      6.45458      5.76496      5.76470      5.72045      5.64537      5.43041      5.15302      5.02434
+  4620500.00 |       6.36947      5.77660      5.65056      5.66328      5.60493      5.36453      5.18085      4.97099      4.94746
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  23
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     297400.00    297500.00    297600.00    297700.00    297800.00    297900.00    298000.00    298100.00    298200.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       4.35468      4.35772      4.70091      5.29441      5.57702      5.56337      5.30752      5.02737      5.09301
+  4623400.00 |       4.45045      4.42587      4.79973      5.39576      5.64605      5.59759      5.31317      5.09103      5.08315
+  4623300.00 |       4.54130      4.48197      4.88399      5.47884      5.68449      5.63144      5.31844      5.09793      5.04764
+  4623200.00 |       4.66574      4.55975      4.95331      5.53913      5.68306      5.66554      5.30313      5.10719      5.21994
+  4623100.00 |       4.83787      4.66102      5.03045      5.56670      5.66597      5.65794      5.29767      5.10182      5.58517
+  4623000.00 |       5.07850      4.77671      5.08698      5.56952      5.63681      5.57894      5.31315      5.24254      5.90026
+  4622900.00 |       5.35203      4.91067      5.15260      5.53102      5.59467      5.41912      5.29940      5.65513      6.16173
+  4622800.00 |       5.54010      5.15847      5.19920      5.45646      5.55942      5.31858      5.42325      6.04423      6.38804
+  4622700.00 |       5.73424      5.43389      5.22776      5.48475      5.50572      5.50557      5.85384      6.53894      6.38882
+  4622600.00 |       6.09176      5.55686      5.29130      5.70296      5.73133      5.80131      6.35972      6.73726      6.73147
+  4622500.00 |       6.06474      5.84650      5.42545      5.88875      5.84375      6.24189      7.09063      7.10642      6.89527
+  4622400.00 |       6.14021      6.18595      5.58299      5.97884      6.23580      7.07790      7.53871      7.49077      6.83813
+  4622300.00 |       6.21727      6.11380      5.84487      6.04478      6.77229      7.69657      8.14920      7.58415      6.68896
+  4622200.00 |       6.96954      6.13771      6.03050      6.05803      7.83549      8.87296      8.51274      7.56996      6.80570
+  4622100.00 |       6.98433      7.34235      6.77631      6.93028      8.25754      9.29949      8.67720      7.49017      6.58725
+  4622000.00 |       7.81425      8.42437      8.38349      7.81439     10.08295      8.56850      7.25298      6.43767      5.87562
+  4621900.00 |       7.11338      7.99391      8.27839      6.12011      7.76325      7.96135      6.87866      6.66864      6.62907
+  4621800.00 |       6.78734      7.23703      6.89041      6.70265      8.41546      8.32404      7.07160      8.09442      8.68042
+  4621700.00 |       7.10150      6.93330      8.10884      7.46939      9.85258      8.27087      6.67332     10.06294      8.85090
+  4621600.00 |       8.19603      6.38663      6.93344      7.47195      6.91481      7.75306     11.41287     13.44458     10.71875
+  4621500.00 |       9.68835      7.21400     10.35173      8.12852      6.88992      6.70292      7.58280     10.41464      9.71291
+  4621400.00 |       9.59952      7.21713      7.78024      7.06445      5.99241      6.15100      6.14471      8.09223      8.04358
+  4621300.00 |       8.63526      6.65924      6.44392      5.81262      5.15405      5.23029      5.47341      6.37187      6.74743
+  4621200.00 |       7.29517      6.03541      5.52023      5.28933      4.57743      4.57912      4.83873      5.54523      6.32677
+  4621100.00 |       6.45643      5.41055      4.94557      4.76654      4.53979      4.35893      4.50239      5.25165      5.74749
+  4621000.00 |       5.86770      5.02793      4.65539      4.52493      4.25248      4.25913      4.30063      4.94891      5.34870
+  4620900.00 |       5.44041      4.83046      4.38739      4.32537      4.17340      4.28383      4.18246      4.64793      4.91352
+  4620800.00 |       5.14689      4.69725      4.25949      4.10151      4.11658      3.95054      4.07989      4.45633      4.66733
+  4620700.00 |       4.94913      4.64611      4.24061      4.09139      4.11671      3.95590      4.00599      4.30563      4.57977
+  4620600.00 |       4.84267      4.62124      4.47103      4.38588      4.22285      4.09900      3.96997      4.17459      4.43737
+  4620500.00 |       4.83915      4.82948      4.71747      4.63055      4.40591      4.21443      3.96983      4.09314      4.31312
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  24
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     298300.00    298400.00    298500.00    298600.00    298700.00    298800.00    298900.00    299000.00    299100.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       5.13823      5.42237      5.58271      5.60461      5.41613      5.20879      5.32192      5.40161      5.34174
+  4623400.00 |       5.27520      5.54405      5.75124      5.64464      5.43141      5.34048      5.52684      5.48320      5.33858
+  4623300.00 |       5.46973      5.79929      5.82557      5.63497      5.37207      5.64450      5.59657      5.43596      5.30985
+  4623200.00 |       5.74471      5.94900      5.83562      5.56273      5.72699      5.73207      5.49642      5.42826      5.21614
+  4623100.00 |       5.96924      6.04342      5.78889      5.76091      5.84508      5.60090      5.51291      5.34364      5.07184
+  4623000.00 |       6.13047      6.00699      5.91752      5.92677      5.71141      5.58791      5.45470      5.20894      5.21840
+  4622900.00 |       6.22893      6.02661      6.03168      5.79144      5.66078      5.51365      5.36585      5.40266      5.46385
+  4622800.00 |       6.23890      6.26889      5.87835      5.73612      5.60327      5.52650      5.57982      5.71324      5.76453
+  4622700.00 |       6.44511      6.11623      5.79681      5.64610      5.64752      5.73412      5.97048      5.98484      5.82251
+  4622600.00 |       6.43040      6.02448      5.68816      5.74522      5.93183      6.19214      6.18660      6.02521      6.03521
+  4622500.00 |       6.25514      5.90120      5.85744      6.16720      6.39490      6.36930      6.21338      6.25665      6.28378
+  4622400.00 |       6.16564      5.96543      6.38534      6.49036      6.47176      6.49908      6.57976      6.51891      6.50380
+  4622300.00 |       6.34631      6.39304      6.40276      6.58749      6.78281      6.77935      6.76328      6.71067      6.71151
+  4622200.00 |       6.20099      6.24862      6.59578      6.77896      6.94719      6.91288      6.78177      6.81615      6.85540
+  4622100.00 |       6.05058      6.19619      6.47012      6.93535      6.82957      6.72300      6.80548      6.71788      6.63251
+  4622000.00 |       5.60216      6.26235      6.92352      6.76499      6.90932      6.99630      6.99150      6.90894      6.76222
+  4621900.00 |       7.04768      7.21628      7.35428      7.46557      7.36864      7.19427      7.16756      7.12764      7.03637
+  4621800.00 |       8.37927      8.29002      7.98743      7.88547      7.92311      7.80452      7.71180      7.61894      7.46266
+  4621700.00 |       8.51428      7.96951      7.95135      7.85048      7.75040      7.53182      7.32130      7.12843      6.93723
+  4621600.00 |       9.12913      8.23277      7.90513      7.35872      7.19634      7.02821      6.79624      6.67086      6.51972
+  4621500.00 |       9.41864      8.44133      7.71202      6.94501      6.63016      6.37486      6.18309      6.09018      6.08338
+  4621400.00 |       7.53930      7.10385      7.25341      7.30291      6.94455      6.57784      6.10833      5.92882      5.95023
+  4621300.00 |       6.61290      6.32142      6.09718      6.08342      6.32891      6.40491      6.28399      6.17542      5.86357
+  4621200.00 |       5.89353      5.84423      5.73370      5.63187      5.65313      5.90101      5.77963      5.74470      5.80841
+  4621100.00 |       5.49873      5.50191      5.46515      5.34066      5.33087      5.37934      5.51419      5.61193      5.48532
+  4621000.00 |       5.54108      5.09984      5.24372      5.10565      5.15599      5.11431      5.12763      5.15492      5.41488
+  4620900.00 |       5.25414      5.00141      4.96756      4.95647      4.84833      4.97142      4.87880      4.86635      4.88502
+  4620800.00 |       4.84223      4.99655      4.71361      4.79196      4.69450      4.72762      4.79854      4.67542      4.63772
+  4620700.00 |       4.51035      4.78043      4.57735      4.60192      4.58007      4.48564      4.60922      4.61345      4.47497
+  4620600.00 |       4.43146      4.49494      4.60730      4.39096      4.47212      4.34393      4.34567      4.46728      4.46649
+  4620500.00 |       4.36712      4.35372      4.59231      4.44620      4.33542      4.31660      4.19160      4.27542      4.32110
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  25
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     299200.00    299300.00    299400.00    299500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  4623500.00 |       5.20958      5.09481      4.91550      4.83990
+  4623400.00 |       5.19747      5.02431      4.85907      4.79544
+  4623300.00 |       5.11667      4.89752      4.84772      4.98705
+  4623200.00 |       4.97695      4.94191      5.06214      5.16972
+  4623100.00 |       5.04859      5.16097      5.27026      5.40589
+  4623000.00 |       5.29079      5.44304      5.52842      5.53547
+  4622900.00 |       5.58051      5.61688      5.61807      5.45044
+  4622800.00 |       5.65145      5.64979      5.62089      5.63981
+  4622700.00 |       5.81081      5.82682      5.81437      5.63566
+  4622600.00 |       6.00514      5.97043      5.88278      5.84584
+  4622500.00 |       6.18409      6.16289      6.21194      6.21964
+  4622400.00 |       6.47339      6.50081      6.45315      6.40317
+  4622300.00 |       6.71643      6.64176      6.58998      6.46627
+  4622200.00 |       6.70689      6.54061      6.30387      6.05423
+  4622100.00 |       6.53279      6.38740      6.21605      6.04425
+  4622000.00 |       6.60036      6.41759      6.29313      6.13941
+  4621900.00 |       6.92236      6.81934      6.70464      6.55777
+  4621800.00 |       7.26756      7.04988      6.86500      6.67610
+  4621700.00 |       6.72733      6.51043      6.31605      6.12269
+  4621600.00 |       6.38433      6.24803      6.10009      5.95855
+  4621500.00 |       6.01447      5.90960      5.78580      5.68049
+  4621400.00 |       5.90182      5.82077      5.75265      5.65360
+  4621300.00 |       5.74379      5.61998      5.58755      5.50051
+  4621200.00 |       5.73580      5.58454      5.50865      5.41172
+  4621100.00 |       5.36515      5.40549      5.41815      5.42021
+  4621000.00 |       5.34405      5.25293      5.13563      5.15819
+  4620900.00 |       5.11555      5.20302      5.14982      5.03974
+  4620800.00 |       4.62793      4.77183      4.98180      5.05000
+  4620700.00 |       4.40470      4.42185      4.46025      4.72965
+  4620600.00 |       4.33056      4.21723      4.30006      4.38961
+  4620500.00 |       4.31963      4.20697      4.12821      4.22458
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  26
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                             *** DISCRETE CARTESIAN RECEPTOR POINTS ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+       X-COORD (M)   Y-COORD (M)        CONC                       X-COORD (M)   Y-COORD (M)        CONC
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+         300408.00    4622409.00        4.97735                      298568.00    4622728.00        5.69908                         
+         297250.00    4621100.00        7.49999                      296950.00    4621650.00        5.68268                         
+         298425.00    4621828.00        7.98816                                                                                     
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  27
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                              *** THE MAXIMUM   50   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     TERMHTR     , MAINT       , CARGOH      , 
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.      13.67095 (21051819) AT ( 298100.00, 4621600.00)  GC       26.      13.03695 (22120804) AT ( 298100.00, 4621600.00)  GC
+    2.      13.64373 (22052222) AT ( 298100.00, 4621600.00)  GC       27.      13.01411 (19052103) AT ( 298100.00, 4621600.00)  GC
+    3.      13.52189 (21070202) AT ( 298100.00, 4621600.00)  GC       28.      13.00878 (19062402) AT ( 298100.00, 4621600.00)  GC
+    4.      13.50678 (21081420) AT ( 298100.00, 4621600.00)  GC       29.      12.97693 (19042805) AT ( 298100.00, 4621600.00)  GC
+    5.      13.42350 (23083019) AT ( 298100.00, 4621600.00)  GC       30.      12.95213 (22100823) AT ( 298100.00, 4621600.00)  GC
+    6.      13.41985 (23083101) AT ( 298100.00, 4621600.00)  GC       31.      12.95018 (19062305) AT ( 298100.00, 4621600.00)  GC
+    7.      13.40523 (21073022) AT ( 298100.00, 4621600.00)  GC       32.      12.94488 (23121317) AT ( 298100.00, 4621600.00)  GC
+    8.      13.39620 (19062401) AT ( 298100.00, 4621600.00)  GC       33.      12.93191 (19031604) AT ( 298100.00, 4621600.00)  GC
+    9.      13.37274 (21082404) AT ( 298100.00, 4621600.00)  GC       34.      12.91797 (19051805) AT ( 298100.00, 4621600.00)  GC
+   10.      13.36279 (19092418) AT ( 298100.00, 4621600.00)  GC       35.      12.91052 (19022120) AT ( 298100.00, 4621600.00)  GC
+   11.      13.33919 (19062123) AT ( 298100.00, 4621600.00)  GC       36.      12.90879 (20040701) AT ( 298100.00, 4621600.00)  GC
+   12.      13.29030 (19081019) AT ( 298100.00, 4621600.00)  GC       37.      12.90648 (20021124) AT ( 298100.00, 4621600.00)  GC
+   13.      13.24821 (22091518) AT ( 298100.00, 4621600.00)  GC       38.      12.90192 (22100802) AT ( 298100.00, 4621600.00)  GC
+   14.      13.23191 (22101418) AT ( 298100.00, 4621600.00)  GC       39.      12.89719 (23021408) AT ( 298100.00, 4621600.00)  GC
+   15.      13.18599 (21090221) AT ( 298100.00, 4621600.00)  GC       40.      12.88308 (19022121) AT ( 298100.00, 4621600.00)  GC
+   16.      13.18568 (19092421) AT ( 298100.00, 4621600.00)  GC       41.      12.87262 (22032107) AT ( 298100.00, 4621600.00)  GC
+   17.      13.17986 (21112216) AT ( 298100.00, 4621600.00)  GC       42.      12.86269 (23010918) AT ( 298100.00, 4621600.00)  GC
+   18.      13.17863 (21103102) AT ( 298100.00, 4621600.00)  GC       43.      12.85543 (20031319) AT ( 298100.00, 4621600.00)  GC
+   19.      13.14303 (19092422) AT ( 298100.00, 4621600.00)  GC       44.      12.85200 (20012818) AT ( 298100.00, 4621600.00)  GC
+   20.      13.12550 (23101518) AT ( 298100.00, 4621600.00)  GC       45.      12.85131 (21022521) AT ( 298100.00, 4621600.00)  GC
+   21.      13.12102 (22092223) AT ( 298100.00, 4621600.00)  GC       46.      12.84520 (21110117) AT ( 298100.00, 4621600.00)  GC
+   22.      13.09805 (19040619) AT ( 298100.00, 4621600.00)  GC       47.      12.83590 (21022608) AT ( 298100.00, 4621600.00)  GC
+   23.      13.08853 (20053104) AT ( 298100.00, 4621600.00)  GC       48.      12.82895 (23110116) AT ( 298100.00, 4621600.00)  GC
+   24.      13.07163 (19062201) AT ( 298100.00, 4621600.00)  GC       49.      12.82533 (19032405) AT ( 298100.00, 4621600.00)  GC
+   25.      13.06583 (23040703) AT ( 298100.00, 4621600.00)  GC       50.      12.81971 (22040919) AT ( 298100.00, 4621600.00)  GC
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  28
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                   *** THE SUMMARY OF MAXIMUM ANNUAL RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS       0.87398 AT (  298100.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          2ND HIGHEST VALUE IS       0.73114 AT (  297700.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          3RD HIGHEST VALUE IS       0.70736 AT (  297600.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          4TH HIGHEST VALUE IS       0.69960 AT (  298200.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          5TH HIGHEST VALUE IS       0.68221 AT (  298100.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          6TH HIGHEST VALUE IS       0.67232 AT (  298000.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          7TH HIGHEST VALUE IS       0.66708 AT (  297800.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          8TH HIGHEST VALUE IS       0.64845 AT (  297700.00,  4621400.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          9TH HIGHEST VALUE IS       0.63888 AT (  297900.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+         10TH HIGHEST VALUE IS       0.63483 AT (  297800.00,  4621400.00,     0.00,     0.00,    0.00)  GC  GRID1   
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  29
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                      *** THE SUMMARY OF MAXIMUM   1ST-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS      13.44458 AT (  298100.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          2ND HIGHEST VALUE IS      11.41287 AT (  298000.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          3RD HIGHEST VALUE IS      10.71875 AT (  298200.00,  4621600.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          4TH HIGHEST VALUE IS      10.41464 AT (  298100.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          5TH HIGHEST VALUE IS      10.35173 AT (  297600.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          6TH HIGHEST VALUE IS      10.08295 AT (  297800.00,  4622000.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          7TH HIGHEST VALUE IS      10.06294 AT (  298100.00,  4621700.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          8TH HIGHEST VALUE IS      10.00202 AT (  297300.00,  4621400.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          9TH HIGHEST VALUE IS       9.85258 AT (  297800.00,  4621700.00,     0.00,     0.00,    0.00)  GC  GRID1   
+         10TH HIGHEST VALUE IS       9.71291 AT (  298200.00,  4621500.00,     0.00,     0.00,    0.00)  GC  GRID1   
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION 24142  ***   ***  Providence Airport Area NO2 Screening - 2019 to 2023                ***        04/22/26
+ *** AERMET - VERSION  23132 ***   ***                                                                      ***        18:48:48
+                                                                                                                       PAGE  30
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of           11 Warning Message(s)
+ A Total of         2233 Informational Message(s)
+
+ A Total of        43824 Hours Were Processed
+
+ A Total of          360 Calm Hours Identified
+
+ A Total of         1873 Missing Hours Identified (  4.27 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ CO W361       8       COCARD: Multiyear PERIOD/ANNUAL values for NO2/SO2 require MULTYEAR Opt
+ RE W214      27       RECART: ELEV Input Inconsistent With Option: Defaults Used        GRID1
+ RE W229      29       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      30       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      31       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      32       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ RE W229      33       DISCAR: Too Many Parameters - Inputs Ignored on Keyword        DISCCART
+ ME W186      43       MEOPEN: THRESH_1MIN 1-min ASOS wind speed threshold used           0.50
+ ME W187      43       MEOPEN: ADJ_U* Option for Stable Low Winds used in AERMET              
+ ME W530      43       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     UAIRDATA
+ ME W531      43       MEOPEN: CAUTION! Met Station ID Missing from SURFFILE for      SITEDATA
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+

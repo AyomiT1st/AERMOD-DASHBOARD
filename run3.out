@@ -1,0 +1,570 @@
+CO STARTING
+   TITLEONE  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background
+   MODELOPT  DFAULT CONC
+   AVERTIME  1
+   POLLUTID  NO2
+   RUNORNOT  RUN
+   ERRORFIL  ERRORS_1HR_BG.OUT
+CO FINISHED
+ 
+SO STARTING
+   ELEVUNIT  METERS
+   LOCATION  BOILER POINT 350000.0 3700000.0 0.0
+   LOCATION  DRYER  POINT 350050.0 3700025.0 0.0
+   LOCATION  OVEN   POINT 349975.0 3699975.0 0.0
+   LOCATION  GEN    POINT 350080.0 3700060.0 0.0
+   LOCATION  FPUMP  POINT 349940.0 3699940.0 0.0
+ 
+   SRCPARAM  BOILER 0.441 20.0 400.0 15.0 1.0
+   SRCPARAM  DRYER  0.315 18.0 390.0 14.0 0.9
+   SRCPARAM  OVEN   0.441 22.0 410.0 16.0 1.1
+   SRCPARAM  GEN    1.058 8.0 700.0 18.0 0.35
+   SRCPARAM  FPUMP  0.529 6.0 650.0 16.0 0.30
+ 
+   BACKUNIT  UG/M3
+   BACKGRND  HROFDY 78.1 72.8 67.9 65.7 64.7 68.0 69.2 71.3 73.8 73.1 68.6 60.4
+   BACKGRND  HROFDY 54.9 52.3 49.8 49.6 54.7 71.1 85.9 87.7 88.3 87.3 86.1 82.7
+ 
+   SRCGROUP  ALL BACKGROUND
+SO FINISHED
+ 
+RE STARTING
+   GRIDCART  GRID1 STA
+   GRIDCART  GRID1 XYINC 349500.0 11 100.0 3699500.0 11 100.0
+   GRIDCART  GRID1 END
+RE FINISHED
+ 
+ME STARTING
+   SURFFILE  Phoenix_2020-2024.SFC FREE
+   PROFFILE  Phoenix_2020-2024.PFL FREE
+   SURFDATA  722780 2020 PHOENIX
+   SITEDATA  722780 2020 PHOENIX
+   UAIRDATA  722780 2020 PHOENIX
+   PROFBASE  0.0
+ME FINISHED
+ 
+OU STARTING
+   RECTABLE  ALLAVE FIRST
+   MAXTABLE  ALLAVE 50
+   SUMMFILE  run3.sum
+OU FINISHED
+
+
+  *** Message Summary For AERMOD Model Setup ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            7 Warning Message(s)
+ A Total of            0 Informational Message(s)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ SO W298      28        SOGRP: Results reported for source group ALL include        BACKGROUND
+ RE W214      34       RECART: ELEV Input Inconsistent With Option: Defaults Used        GRID1
+ ME W186      44       MEOPEN: THRESH_1MIN 1-min ASOS wind speed threshold used           0.50
+ ME W187      44       MEOPEN: ADJ_U* Option for Stable Low Winds used in AERMET              
+ ME W530      44       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SURFDATA
+ ME W530      44       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     UAIRDATA
+ ME W531      44       MEOPEN: CAUTION! Met Station ID Missing from SURFFILE for      SITEDATA
+
+ ***********************************
+ *** SETUP Finishes Successfully ***
+ ***********************************
+
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   1
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                            ***     MODEL SETUP OPTIONS SUMMARY       ***
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ ** Model Options Selected:
+      * Model Uses Regulatory DEFAULT Options
+      * Model Is Setup For Calculation of Average CONCentration Values.
+      * NO GAS DEPOSITION Data Provided.
+      * NO PARTICLE DEPOSITION Data Provided.
+      * Model Uses NO DRY DEPLETION. DDPLETE  =  F
+      * Model Uses NO WET DEPLETION. WETDPLT  =  F
+      * Stack-tip Downwash.
+      * Model Accounts for ELEVated Terrain Effects.
+      * Use Calms Processing Routine.
+      * Use Missing Data Processing Routine.
+      * No Exponential Decay.
+      * Full Conversion Assumed for NO2.
+      * Model Uses RURAL Dispersion Only.
+      * ADJ_U*   - Use ADJ_U* option for SBL in AERMET
+      * CCVR_Sub - Meteorological data includes CCVR substitutions
+      * TEMP_Sub - Meteorological data includes TEMP substitutions
+      * Model Assumes No FLAGPOLE Receptor Heights. 
+      * The User Specified a Pollutant Type of: NO2     
+
+ **Note that special processing requirements apply for the 1-hour NO2 NAAQS - check available guidance.
+   Model will process user-specified ranks of daily maximum 1-hour values averaged across the number of years modeled.
+   For annual NO2 NAAQS modeling, the multi-year maximum of PERIOD values can be simulated using the MULTYEAR keyword.
+   Multi-year PERIOD and 1-hour values should only be done in a single model run using the MULTYEAR option with a
+   single multi-year meteorological data file using STARTEND keyword.
+  
+ **Model Calculates  1 Short Term Average(s) of:   1-HR
+  
+ **This Run Includes:      5 Source(s);       1 Source Group(s); and     121 Receptor(s)
+
+                with:      5 POINT(s), including
+                           0 POINTCAP(s) and      0 POINTHOR(s)
+                 and:      0 VOLUME source(s)
+                 and:      0 AREA type source(s)
+                 and:      0 LINE source(s)
+                 and:      0 RLINE/RLINEXT source(s)
+                 and:      0 OPENPIT source(s)
+                 and:      0 BUOYANT LINE source(s) with a total of     0 line(s)
+                 and:      0 SWPOINT source(s)
+
+
+ **This Run Includes BACKGRND Values for      1 Source Group(s) for a Single Sector
+          Non-HOURLY BACKGRND Values are Available Varying by: HROFDY
+  
+ **Model Set To Continue RUNning After the Setup Testing.
+
+ **The AERMET Input Meteorological Data Version Date:  24142
+  
+ **Output Options Selected:
+          Model Outputs Tables of Highest Short Term Values by Receptor (RECTABLE Keyword)
+          Model Outputs Tables of Overall Maximum Short Term Values (MAXTABLE Keyword)
+          Model Outputs Separate Summary File of High Ranked Values (SUMMFILE Keyword)
+  
+ **NOTE:  The Following Flags May Appear Following CONC Values:  c for Calm Hours
+                                                                 m for Missing Hours
+                                                                 b for Both Calm and Missing Hours
+  
+ **Misc. Inputs:  Base Elev. for Pot. Temp. Profile (m MSL) =     0.00 ;  Decay Coef. =    0.000     ;  Rot. Angle =     0.0
+                  Emission Units = GRAMS/SEC                                ;  Emission Rate Unit Factor =   0.10000E+07
+                  Output Units   = MICROGRAMS/M**3                         
+  
+ **Approximate Storage Requirements of Model =      3.5 MB of RAM.
+  
+ **Input Runstream File:          run3.inp                                                                                        
+ **Output Print File:             run3.out                                                                                        
+
+ **Detailed Error/Message File:   ERRORS_1HR_BG.OUT                                                                               
+ **File for Summary of Results:   run3.sum                                                                                        
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   2
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+
+                                                  *** POINT SOURCE DATA ***
+
+               NUMBER EMISSION RATE                    BASE     STACK   STACK    STACK     STACK    BLDG   URBAN  CAP/  EMIS RATE
+   SOURCE       PART.  (GRAMS/SEC)     X        Y      ELEV.    HEIGHT  TEMP.   EXIT VEL. DIAMETER  EXISTS SOURCE HOR   SCALAR
+     ID         CATS.               (METERS) (METERS) (METERS) (METERS) (DEG.K)  (M/SEC)  (METERS)                      VARY BY
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ BOILER           0   0.44100E+00  350000.0 3700000.0     0.0    20.00   400.00    15.00     1.00    NO      NO    NO         
+ DRYER            0   0.31500E+00  350050.0 3700025.0     0.0    18.00   390.00    14.00     0.90    NO      NO    NO         
+ OVEN             0   0.44100E+00  349975.0 3699975.0     0.0    22.00   410.00    16.00     1.10    NO      NO    NO         
+ GEN              0   0.10580E+01  350080.0 3700060.0     0.0     8.00   700.00    18.00     0.35    NO      NO    NO         
+ FPUMP            0   0.52900E+00  349940.0 3699940.0     0.0     6.00   650.00    16.00     0.30    NO      NO    NO         
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   3
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+
+                                           *** SOURCE IDs DEFINING SOURCE GROUPS ***
+
+ SRCGROUP ID                                              SOURCE IDs
+ -----------                                              ----------
+
+
+  ALL        BOILER      , DRYER       , OVEN        , GEN         , FPUMP       , BACKGROUND  ,
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   4
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                    * SECT1 BACKGROUND CONCENTRATIONS WHICH VARY FOR EACH HOUR OF THE DAY (UG/M3) *
+
+     HOUR    BKGRND      HOUR    BKGRND      HOUR    BKGRND      HOUR    BKGRND      HOUR    BKGRND      HOUR    BKGRND
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+       1   .78100E+02      2   .72800E+02      3   .67900E+02      4   .65700E+02      5   .64700E+02      6   .68000E+02
+       7   .69200E+02      8   .71300E+02      9   .73800E+02     10   .73100E+02     11   .68600E+02     12   .60400E+02
+      13   .54900E+02     14   .52300E+02     15   .49800E+02     16   .49600E+02     17   .54700E+02     18   .71100E+02
+      19   .85900E+02     20   .87700E+02     21   .88300E+02     22   .87300E+02     23   .86100E+02     24   .82700E+02
+
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   5
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                        *** GRIDDED RECEPTOR NETWORK SUMMARY ***
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                          *** X-COORDINATES OF GRID ***
+                                                    (METERS)
+
+       349500.0,  349600.0,  349700.0,  349800.0,  349900.0,  350000.0,  350100.0,  350200.0,  350300.0,  350400.0,
+       350500.0,
+
+                                          *** Y-COORDINATES OF GRID *** 
+                                                    (METERS)
+
+      3699500.0, 3699600.0, 3699700.0, 3699800.0, 3699900.0, 3700000.0, 3700100.0, 3700200.0, 3700300.0, 3700400.0,
+      3700500.0,
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   6
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     349500.00    349600.00    349700.00    349800.00    349900.00    350000.00    350100.00    350200.00    350300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   7
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * ELEVATION HEIGHTS IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     350400.00    350500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |          0.00         0.00
+  3700400.00 |          0.00         0.00
+  3700300.00 |          0.00         0.00
+  3700200.00 |          0.00         0.00
+  3700100.00 |          0.00         0.00
+  3700000.00 |          0.00         0.00
+  3699900.00 |          0.00         0.00
+  3699800.00 |          0.00         0.00
+  3699700.00 |          0.00         0.00
+  3699600.00 |          0.00         0.00
+  3699500.00 |          0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   8
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     349500.00    349600.00    349700.00    349800.00    349900.00    350000.00    350100.00    350200.00    350300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700400.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700300.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700200.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700100.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3700000.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699900.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699800.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699700.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699600.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+  3699500.00 |          0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE   9
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                  *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                                * HILL HEIGHT SCALES IN METERS *
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     350400.00    350500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |          0.00         0.00
+  3700400.00 |          0.00         0.00
+  3700300.00 |          0.00         0.00
+  3700200.00 |          0.00         0.00
+  3700100.00 |          0.00         0.00
+  3700000.00 |          0.00         0.00
+  3699900.00 |          0.00         0.00
+  3699800.00 |          0.00         0.00
+  3699700.00 |          0.00         0.00
+  3699600.00 |          0.00         0.00
+  3699500.00 |          0.00         0.00
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  10
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                      * SOURCE-RECEPTOR COMBINATIONS FOR WHICH CALCULATIONS MAY NOT BE PERFORMED *
+                        LESS THAN 1.0 METER; WITHIN OPENPIT; OR BEYOND 80KM FOR FASTAREA/FASTALL
+
+
+                              SOURCE          - - RECEPTOR LOCATION - -         DISTANCE
+                                ID            XR (METERS)   YR (METERS)         (METERS)
+                            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+                             BOILER              350000.0     3700000.0             0.00
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  11
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                            *** METEOROLOGICAL DAYS SELECTED FOR PROCESSING ***
+                                                               (1=YES; 0=NO)
+
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1 1 1 1 1
+            1 1 1 1 1 1 1 1 1 1   1 1 1 1 1 1
+
+                NOTE:  METEOROLOGICAL DATA ACTUALLY PROCESSED WILL ALSO DEPEND ON WHAT IS INCLUDED IN THE DATA FILE.
+
+
+
+                                  *** UPPER BOUND OF FIRST THROUGH FIFTH WIND SPEED CATEGORIES ***
+                                                            (METERS/SEC)
+
+                                                 1.54,   3.09,   5.14,   8.23,  10.80,
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  12
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                                    *** UP TO THE FIRST 24 HOURS OF METEOROLOGICAL DATA ***
+
+   Surface file:   Phoenix_2020-2024.SFC                                                              Met Version:  24142
+   Profile file:   Phoenix_2020-2024.PFL                                                           
+   Surface format: FREE                                                                                                     
+   Profile format: FREE                                                                                                     
+   Surface station no.:   722780                  Upper air station no.:   722780
+                  Name: PHOENIX                                    Name: PHOENIX                                 
+                  Year:   2020                                     Year:   2020
+
+ First 24 hours of scalar data
+ YR MO DY JDY HR     H0     U*     W*  DT/DZ ZICNV ZIMCH  M-O LEN    Z0  BOWEN ALBEDO  REF WS   WD     HT  REF TA     HT
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 20 01 01   1 01   -6.9  0.110 -9.000 -9.000 -999.   88.     17.0  0.04   2.90   1.00    1.71  116.   10.0  280.9    2.0
+ 20 01 01   1 02   -3.6  0.081 -9.000 -9.000 -999.   56.     12.9  0.04   2.90   1.00    1.21  138.   10.0  280.3    2.0
+ 20 01 01   1 03   -8.5  0.124 -9.000 -9.000 -999.  105.     19.5  0.04   2.90   1.00    1.86  141.   10.0  280.9    2.0
+ 20 01 01   1 04  -12.5  0.151 -9.000 -9.000 -999.  140.     24.9  0.04   2.90   1.00    2.28   94.   10.0  280.3    2.0
+ 20 01 01   1 05  -15.0  0.166 -9.000 -9.000 -999.  162.     30.2  0.04   2.90   1.00    2.49  106.   10.0  280.3    2.0
+ 20 01 01   1 06   -8.5  0.123 -9.000 -9.000 -999.  104.     19.0  0.04   2.90   1.00    1.89   95.   10.0  279.2    2.0
+ 20 01 01   1 07  -14.5  0.162 -9.000 -9.000 -999.  156.     28.7  0.04   2.90   1.00    2.47   71.   10.0  278.8    2.0
+ 20 01 01   1 08  -10.9  0.139 -9.000 -9.000 -999.  124.     21.6  0.04   2.90   1.00    2.15   85.   10.0  278.1    2.0
+ 20 01 01   1 09    0.5  0.161  0.060  0.008   14.  156.   -701.5  0.04   2.90   0.41    2.23  102.   10.0  280.3    2.0
+ 20 01 01   1 10   79.9  0.298  0.664  0.005  128.  391.    -28.9  0.04   2.90   0.27    3.68  115.   10.0  283.1    2.0
+ 20 01 01   1 11   97.6  0.272  0.907  0.006  266.  340.    -17.9  0.04   2.90   0.22    3.22   96.   10.0  284.2    2.0
+ 20 01 01   1 12  150.2  0.253  1.341  0.007  559.  305.     -9.4  0.04   2.90   0.21    2.81  100.   10.0  285.9    2.0
+ 20 01 01   1 13  191.4  0.217  1.565  0.005  698.  243.     -4.7  0.04   2.90   0.20    2.21  111.   10.0  287.0    2.0
+ 20 01 01   1 14  152.0  0.163  1.588  0.005  916.  159.     -2.5  0.04   2.90   0.21    1.45  292.   10.0  287.5    2.0
+ 20 01 01   1 15  121.7  0.177  1.509  0.005  979.  179.     -3.9  0.04   2.90   0.22    1.69  174.   10.0  287.5    2.0
+ 20 01 01   1 16   72.9  0.193  1.288  0.005 1016.  204.     -8.6  0.04   2.90   0.27    2.08  253.   10.0  288.1    2.0
+ 20 01 01   1 17    8.7  0.235  0.635  0.005 1020.  273.   -129.0  0.04   2.90   0.40    3.08  259.   10.0  288.1    2.0
+ 20 01 01   1 18  -15.4  0.170 -9.000 -9.000 -999.  169.     31.7  0.04   2.90   1.00    2.50  254.   10.0  287.0    2.0
+ 20 01 01   1 19   -9.1  0.129 -9.000 -9.000 -999.  111.     20.4  0.04   2.90   1.00    1.94  240.   10.0  285.3    2.0
+ 20 01 01   1 20  -12.4  0.151 -9.000 -9.000 -999.  141.     25.2  0.04   2.90   1.00    2.25  267.   10.0  285.9    2.0
+ 20 01 01   1 21   -7.2  0.113 -9.000 -9.000 -999.   92.     17.5  0.04   2.90   1.00    1.77  239.   10.0  283.8    2.0
+ 20 01 01   1 22  -10.0  0.135 -9.000 -9.000 -999.  120.     21.5  0.04   2.90   1.00    2.03  267.   10.0  283.1    2.0
+ 20 01 01   1 23   -5.5  0.099 -9.000 -9.000 -999.   75.     15.5  0.04   2.90   1.00    1.50  151.   10.0  282.5    2.0
+ 20 01 01   1 24  -14.0  0.160 -9.000 -9.000 -999.  154.     28.3  0.04   2.90   1.00    2.45   71.   10.0  283.1    2.0
+
+
+ First hour of profile data
+ YR MO DY HR HEIGHT F  WDIR    WSPD AMB_TMP sigmaA  sigmaW  sigmaV
+ 20 01 01 01   10.0 1  116.    1.71   281.0   99.0  -99.00  -99.00
+
+ F indicates top of profile (=1) or below (=0)
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  13
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     BOILER      , DRYER       , OVEN        , GEN         , FPUMP       , 
+                 BACKGROUND  , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     349500.00    349600.00    349700.00    349800.00    349900.00    350000.00    350100.00    350200.00    350300.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |     118.97225    120.89772    123.33728    125.89500    130.50700    131.98559    135.02586    138.87392    140.34763
+  3700400.00 |     120.31718    121.90280    125.25294    129.72793    136.15818    141.07782    142.45626    151.35706    148.62285
+  3700300.00 |     122.33268    124.51126    127.91121    135.37238    146.66002    156.84117    158.20416    170.13498    159.70665
+  3700200.00 |     123.80756    126.26457    131.75315    143.10159    162.15321    184.19114    186.39241    187.64960    178.48750
+  3700100.00 |     126.00247    127.52911    133.85495    148.52512    170.98373    170.08053    146.64281    197.77099    177.45399
+  3700000.00 |     131.39396    133.06478    137.86448    159.00697    193.12011    183.85809    160.59577    191.68287    165.80872
+  3699900.00 |     137.75124    143.87594    159.14271    190.32725    222.64092    196.03565    174.95215    165.14045    152.55372
+  3699800.00 |     143.35954    152.86777    165.57301    196.01142    167.21028    160.88650    149.00671    143.14233    138.61938
+  3699700.00 |     142.56903    149.12131    160.39872    160.57661    145.90641    135.85048    132.91683    132.92640    130.04751
+  3699600.00 |     139.47998    145.09343    146.19836    143.45708    136.83541    128.04135    126.03258    125.05977    123.39340
+  3699500.00 |     136.20284    139.00880    137.69659    135.45916    130.29191    125.43603    123.20322    122.49932    121.79543
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  14
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+    *** THE   1ST-HIGHEST MAX DAILY 1-HR AVERAGE CONCENTRATION    VALUES AVERAGED OVER   5 YEARS FOR SOURCE GROUP: ALL      ***
+                                  INCLUDING SOURCE(S):     BOILER      , DRYER       , OVEN        , GEN         , FPUMP       , 
+                 BACKGROUND  , 
+
+                                   *** NETWORK ID: GRID1    ;  NETWORK TYPE: GRIDCART ***
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+    Y-COORD  |                                                X-COORD (METERS)
+    (METERS) |     350400.00    350500.00
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  3700500.00 |     139.35223    138.40603
+  3700400.00 |     144.48886    143.86837
+  3700300.00 |     155.94363    145.93129
+  3700200.00 |     160.14750    147.21382
+  3700100.00 |     157.38653    144.64436
+  3700000.00 |     148.86747    139.50129
+  3699900.00 |     140.11120    133.92504
+  3699800.00 |     133.86881    129.26980
+  3699700.00 |     127.10995    125.19762
+  3699600.00 |     124.44045    122.97946
+  3699500.00 |     121.58700    120.99709
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  15
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                              *** THE MAXIMUM   50   1-HR AVERAGE CONCENTRATION   VALUES FOR SOURCE GROUP:  ALL      ***
+                                  INCLUDING SOURCE(S):     BOILER      , DRYER       , OVEN        , GEN         , FPUMP       , 
+                 BACKGROUND  , 
+
+                                        ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+ RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE    RANK        CONC    (YYMMDDHH) AT      RECEPTOR (XR,YR) OF TYPE 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    1.     239.14272 (21070320) AT ( 349900.00, 3699900.00)  GC       26.     197.44714 (20022520) AT ( 349800.00, 3699800.00)  GC
+    2.     228.66535 (22071722) AT ( 349900.00, 3699900.00)  GC       27.     197.42019 (21021323) AT ( 350000.00, 3699900.00)  GC
+    3.     223.68519 (23091221) AT ( 349900.00, 3699900.00)  GC       28.     196.96392 (22031021) AT ( 350000.00, 3699900.00)  GC
+    4.     213.53817 (20022518) AT ( 349900.00, 3699900.00)  GC       29.     196.84700 (21042121) AT ( 350200.00, 3700200.00)  GC
+    5.     213.43369 (22062520) AT ( 349900.00, 3699900.00)  GC       30.     196.70897 (24010320) AT ( 350000.00, 3699900.00)  GC
+    6.     210.26921 (20102621) AT ( 349900.00, 3699900.00)  GC       31.     196.02926 (20082020) AT ( 350000.00, 3699900.00)  GC
+    7.     208.17318 (24100119) AT ( 349900.00, 3699900.00)  GC       32.     195.67975 (24062821) AT ( 350200.00, 3700200.00)  GC
+    8.     205.24076 (22050819) AT ( 350200.00, 3700100.00)  GC       33.     195.31346 (24062421) AT ( 349900.00, 3700000.00)  GC
+    9.     203.68043 (21073022) AT ( 350200.00, 3700200.00)  GC       34.     195.14128 (22071720) AT ( 350200.00, 3700100.00)  GC
+   10.     202.64009 (24050719) AT ( 350200.00, 3700100.00)  GC       35.     195.09425 (22020222) AT ( 349800.00, 3699800.00)  GC
+   11.     202.25092 (21030920) AT ( 350200.00, 3700100.00)  GC       36.     194.99060 (23081523) AT ( 349800.00, 3699800.00)  GC
+   12.     200.54415 (21050219) AT ( 350200.00, 3700100.00)  GC       37.     194.39716 (22021520) AT ( 350100.00, 3700200.00)  GC
+   13.     200.19592 (24032324) AT ( 350200.00, 3700100.00)  GC       38.     194.27007 (21031524) AT ( 350200.00, 3700200.00)  GC
+   14.     199.80460 (22071721) AT ( 350000.00, 3700000.00)  GC       39.     194.22697 (23021702) AT ( 349900.00, 3699900.00)  GC
+   15.     199.71929 (24072023) AT ( 349900.00, 3700000.00)  GC       40.     194.21794 (22082123) AT ( 349800.00, 3699800.00)  GC
+   16.     199.71350 (21030919) AT ( 350200.00, 3700100.00)  GC       41.     194.01092 (24031421) AT ( 350200.00, 3700000.00)  GC
+   17.     199.54007 (22070121) AT ( 349900.00, 3700000.00)  GC       42.     193.95086 (21011919) AT ( 349800.00, 3699800.00)  GC
+   18.     198.99629 (22070421) AT ( 350200.00, 3700100.00)  GC       43.     193.55741 (22051123) AT ( 350200.00, 3700000.00)  GC
+   19.     198.57131 (24071421) AT ( 350200.00, 3700200.00)  GC       44.     193.18652 (24082022) AT ( 350200.00, 3700100.00)  GC
+   20.     198.40100 (24080821) AT ( 349800.00, 3699800.00)  GC       45.     193.11694 (21071621) AT ( 349800.00, 3699800.00)  GC
+   21.     198.02421 (22102222) AT ( 350200.00, 3700200.00)  GC       46.     193.08443 (24101819) AT ( 350200.00, 3700000.00)  GC
+   22.     197.88358 (21121424) AT ( 350200.00, 3700100.00)  GC       47.     193.05593 (23040323) AT ( 350000.00, 3699900.00)  GC
+   23.     197.76875 (24050819) AT ( 350200.00, 3700100.00)  GC       48.     193.05432 (20122320) AT ( 349800.00, 3699800.00)  GC
+   24.     197.62039 (20081822) AT ( 349800.00, 3699800.00)  GC       49.     192.78948 (22092621) AT ( 349800.00, 3699900.00)  GC
+   25.     197.61752 (21052020) AT ( 350200.00, 3700100.00)  GC       50.     192.72605 (21022821) AT ( 349800.00, 3699800.00)  GC
+
+  *** RECEPTOR TYPES:  GC = GRIDCART
+                       GP = GRIDPOLR
+                       DC = DISCCART
+                       DP = DISCPOLR
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  16
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+                      *** THE SUMMARY OF MAXIMUM   1ST-HIGHEST MAX DAILY  1-HR RESULTS AVERAGED OVER   5 YEARS ***
+
+
+                                    ** CONC OF NO2      IN MICROGRAMS/M**3                          **
+
+                                                                                                             NETWORK
+GROUP ID                       AVERAGE CONC                RECEPTOR  (XR, YR, ZELEV, ZHILL, ZFLAG)  OF TYPE  GRID-ID
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+ALL       1ST HIGHEST VALUE IS     222.64092 AT (  349900.00,  3699900.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          2ND HIGHEST VALUE IS     197.77099 AT (  350200.00,  3700100.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          3RD HIGHEST VALUE IS     196.03565 AT (  350000.00,  3699900.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          4TH HIGHEST VALUE IS     196.01142 AT (  349800.00,  3699800.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          5TH HIGHEST VALUE IS     193.12011 AT (  349900.00,  3700000.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          6TH HIGHEST VALUE IS     191.68287 AT (  350200.00,  3700000.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          7TH HIGHEST VALUE IS     190.32725 AT (  349800.00,  3699900.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          8TH HIGHEST VALUE IS     187.64960 AT (  350200.00,  3700200.00,     0.00,     0.00,    0.00)  GC  GRID1   
+          9TH HIGHEST VALUE IS     186.39241 AT (  350100.00,  3700200.00,     0.00,     0.00,    0.00)  GC  GRID1   
+         10TH HIGHEST VALUE IS     184.19114 AT (  350000.00,  3700200.00,     0.00,     0.00,    0.00)  GC  GRID1   
+
+
+ *** RECEPTOR TYPES:  GC = GRIDCART
+                      GP = GRIDPOLR
+                      DC = DISCCART
+                      DP = DISCPOLR
+ *** AERMOD - VERSION 24142  ***   ***  Phoenix Mini-Plant NO2 Test - 1hr with ADEQ Background              ***        04/21/26
+ *** AERMET - VERSION  24142 ***   ***                                                                      ***        19:06:53
+                                                                                                                       PAGE  17
+ *** MODELOPTs:    RegDFAULT  CONC  ELEV  RURAL  ADJ_U*
+
+ *** Message Summary : AERMOD Model Execution ***
+
+  --------- Summary of Total Messages --------
+  
+ A Total of            0 Fatal Error Message(s)
+ A Total of            7 Warning Message(s)
+ A Total of         1194 Informational Message(s)
+
+ A Total of        43848 Hours Were Processed
+
+ A Total of          640 Calm Hours Identified
+
+ A Total of          554 Missing Hours Identified (  1.26 Percent)
+  
+  
+    ******** FATAL ERROR MESSAGES ******** 
+               ***  NONE  ***         
+  
+  
+    ********   WARNING MESSAGES   ******** 
+ SO W298      28        SOGRP: Results reported for source group ALL include        BACKGROUND
+ RE W214      34       RECART: ELEV Input Inconsistent With Option: Defaults Used        GRID1
+ ME W186      44       MEOPEN: THRESH_1MIN 1-min ASOS wind speed threshold used           0.50
+ ME W187      44       MEOPEN: ADJ_U* Option for Stable Low Winds used in AERMET              
+ ME W530      44       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     SURFDATA
+ ME W530      44       MEOPEN: CAUTION! Met Station ID Mismatch with SURFFILE for     UAIRDATA
+ ME W531      44       MEOPEN: CAUTION! Met Station ID Missing from SURFFILE for      SITEDATA
+
+    ************************************
+    *** AERMOD Finishes Successfully ***
+    ************************************
+
