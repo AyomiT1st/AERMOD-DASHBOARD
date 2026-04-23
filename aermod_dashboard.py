@@ -344,7 +344,7 @@ st.sidebar.header("Configuration")
 
 out_file = st.sidebar.text_input(
     "Path to AERMOD .out file",
-    value=r"C:/Users/taiwoajayi/Desktop/AEROMOD/RUN1/run2.out"
+    value=r"run2.out"
 )
 
 pollutant = st.sidebar.selectbox(
