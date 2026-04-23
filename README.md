@@ -7,7 +7,7 @@ modeling results. Built as part of a broader air quality modeling and
 compliance portfolio.
 
 ## Live Demo
-[Launch App on Hugging Face](https://huggingface.co/spaces/YOUR_USERNAME/aermod-dashboard)
+[Launch App](https://huggingface.co/spaces/AyomiT1st/AERMOD-DASHBOARD)
 
 ## What It Does
 
