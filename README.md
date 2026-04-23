@@ -26,9 +26,21 @@ compliance portfolio.
 
 ## Sample Data
 
-Includes a sample AERMOD run for a hypothetical five-source facility 
-in Phoenix, AZ (UTM Zone 12N). Pollutant: NO2. Met data: Phoenix Sky 
-Harbor 2020-2024 (AERMET processed, GDAS).
+## Sample Data
+
+Includes sample AERMOD runs for hypothetical five-source facilities.
+Pollutant: NO2.
+
+Runs included:
+
+- `run2.out` — Phoenix, AZ (UTM Zone 12N). Annual and 1-hr NO2, 
+  no background. Met: Phoenix Sky Harbor 2020-2024
+- `run3.out` — Phoenix, AZ (UTM Zone 12N). 1-hr NO2 with ADEQ 
+  hourly background concentrations (HROFDY)
+- `Prov.out` — Providence, RI. Additional facility test run
+- `Cent.out` — Centennial, CO. Additional facility test run
+
+Sources modeled: Boiler, Dryer, Oven, Generator, Fire Pump
 
 Sources modeled:
 - Boiler, Dryer, Oven, Generator, Fire Pump
